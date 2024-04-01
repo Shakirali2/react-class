@@ -16,11 +16,28 @@ import Image from "next/image";
 // The component returns an <img /> tag with src and alt attributes. <img /> is written like HTML, but it is actually JavaScript under the hood! This syntax is called JSX, and it lets you embed markup inside JavaScript.
 
 
-export default function Profile() {
+function Profile() {
   return (
     <img
       src="https://i.imgur.com/MK3eW3Am.jpg"
       alt="Katherine Johnson"
     />
+  )
+}
+
+// Using a component 
+// Now that you’ve defined your Profile component, you can nest it inside other components. For example, you can export a Gallery component that uses multiple Profile components:
+
+
+export default function Gallery() {
+  return (
+    <div>
+      <h1>Amazing scientists</h1>
+      <div className="flex">
+      <Profile />
+      <Profile />
+      <Profile />
+      </div>
+    </div>
   )
 }
