@@ -15,9 +15,9 @@ export default function Gallery() {
       <div>
         <h1>Amazing scientists</h1>
         <div className="flex">
+        {/* <Profile />
         <Profile />
-        <Profile />
-        <Profile />
+        <Profile /> */}
         </div>
       </div>
     )
