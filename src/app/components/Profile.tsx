@@ -1,5 +1,7 @@
 // Defining a component
 
+import Avatar from "./Avatar";
+
 // Step 1: Export the component 
 // The export default prefix is a standard JavaScript syntax (not specific to React).
 
@@ -15,9 +17,6 @@
 
 export default function Profile() {
     return (
-      <img
-        src="https://i.imgur.com/MK3eW3Am.jpg"
-        alt="Katherine Johnson"
-      />
+      <Avatar />
     )
   }

@@ -1,7 +1,7 @@
 // Using curly braces: A window into the JavaScript world
 
 const today = new Date();
-
+ 
 function formateDate(date: Date) {
     return new Intl.DateTimeFormat("en-US", { weekday : "long"}).format(date);
 }
@@ -14,4 +14,4 @@ export default function TodoList() {
         </h1>
     );
   }
-  
+   
