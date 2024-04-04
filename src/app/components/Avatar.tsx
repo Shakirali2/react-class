@@ -9,7 +9,8 @@ interface Person {
 }
 
 export default function Avatar({ person, size }: AvatarType) {
-    const avatar = "https://i.imgur.com/MK3eW3Am.jpg";
+    const name = person.name;
+    const avatar =`https://i.imgur.com/${person.imageId}.jpg`
     const description = "Katherine Johnson";
-    return <img src= {avatar} alt={description} />;
-}
+    return <><h1>{name}</h1><img src= {avatar} alt={name} /></>;
+} 
