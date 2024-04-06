@@ -4,13 +4,15 @@ import ToDo from "./components/ToDo";
 import Avatar from "./components/Avatar";
 import TodoList from "./components/ToDoList";
 import Profile from "./components/Profile";
+import PackingList from "./components/PackingList";
 
 export default function Home() {
   return (
     <div>
       {/* <Gallery /> */}
       {/* <ToDo /> */}
-      <Profile />
+      {/* <Profile /> */}
+      <PackingList />
     </div>
   );
 }
