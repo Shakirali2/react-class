@@ -37,7 +37,7 @@ export const people = [{
         person.profession === 'chemist'
       );
       const listItems = chemists.map(person =>
-        <li>
+        <li key={person.id}>
            <img
              src={`https://i.imgur.com/${person.imageId}s.jpg`}
              alt={person.name}
