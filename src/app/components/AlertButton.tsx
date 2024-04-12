@@ -1,6 +1,6 @@
 "use Client";
 
-export default function AlertButton() {
+export default function AlertButton( {message, children}: any) {
     function handleClick() {
         alert("The button was clicked!");
     }
