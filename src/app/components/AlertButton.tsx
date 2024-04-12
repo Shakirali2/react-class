@@ -2,13 +2,11 @@
 
 export default function AlertButton( {message, children}: any) {
     function handleClick() {
-        alert("The button was clicked!");
+        alert({message});
     }
     return (
         <>
-      <button>I don't do anything</button>
-      <br />
-      <button onClick={handleClick}>I do something</button>
+      <button onClick={handleClick}>{children}</button>
         </>
     );
   }

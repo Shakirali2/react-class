@@ -7,6 +7,7 @@ export default function Home() {
       <AlertButton message="Playing!">
         Play Movie
       </AlertButton>
+      <br/>
       <AlertButton message="Uploading!">
         Upload Image
       </AlertButton>
