@@ -1,6 +1,6 @@
 "use Client";
 
-export default function Button() {
+export default function Button({ onClick, children }: any) {
     function handleClick() {
         alert("The button was clicked!");
     }
@@ -8,7 +8,7 @@ export default function Button() {
         <>
       <button>I don't do anything</button>
       <br />
-      <button onClick={handleClick}>I do something</button>
+      <button onClick={onClick}>{children}</button>
         </>
     );
   }

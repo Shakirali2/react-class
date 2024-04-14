@@ -1,16 +1,12 @@
 import AlertButton from "./components/AlertButton";
 import Button from "./components/Button";
+import PlayButton from "./components/PlayButton";
 
 export default function Home() {
   return (
     <div>
-      <AlertButton message="Playing!">
-        Play Movie
-      </AlertButton>
-      <br/>
-      <AlertButton message="Uploading!">
-        Upload Image
-      </AlertButton>
+      <PlayButton movieName="Kiki's Delivery Service" />
+      <UploadButton />
     </div>
   );
 }

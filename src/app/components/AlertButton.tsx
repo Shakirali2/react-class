@@ -2,7 +2,7 @@
 
 export default function AlertButton( {message, children}: any) {
     function handleClick() {
-        alert({message});
+        alert(message);
     }
     return (
         <>
