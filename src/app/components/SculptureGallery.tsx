@@ -1,6 +1,7 @@
-import { sculptureList } from './data.js';
+"use client"
+import { sculptureList } from '../data/sculptureList';
 
-export default function Gallery() {
+export default function SculptureGallery() {
   let index = 0;
 
   function handleClick() {
