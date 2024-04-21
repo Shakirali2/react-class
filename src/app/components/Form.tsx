@@ -1,11 +1,25 @@
- import { useState } from "react";
+import { useState } from "react";
 
 export default function Form() {
     const [answer, setAnswer] =useState("");
     const [error, setError] = useState(null);
+
     const [status, setStatus] = useState('typing');
 
-    function handleTextareaChange(e) {
+
+    async function handleSubmit(e) {
+        e.preventDefault();
+        setStatus('submitting');
+        try {
+          await submitForm(answer);
+          setStatus('success');
+        } catch (err: any) {
+          setStatus('typ ing');
+          setError(err);
+        }
+      }
+    
+    function handleTextareaChange(e: any) {
         setAnswer(e.target.value);
       }
     
