@@ -1,14 +1,13 @@
  import { useState } from "react";
 
-export default function Form({ status = "empty "}) {
+export default function Form() {
     const [answer, setAnswer] =useState("");
     const [error, setError] = useState(null);
+    const [status, setStatus] = useState('typing');
 
-    const [isEmpty, setIsEmpty] = useState(true);
-    const [isTyping, setIsTyping] = useState(false);
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const [isSuccess, setIsSuccess] = useState(false);
-    const [isError, setIsError] = useState(false);
+    function handleTextareaChange(e) {
+        setAnswer(e.target.value);
+      }
     
     if (status === "success") {
         return <h1>That's rihgt!</h1>;
@@ -16,11 +15,15 @@ export default function Form({ status = "empty "}) {
     return (
         <>
         <h2>City quiz</h2 >
-        <p>
+        <p>  
           In which city is there a billboard that turns air into drinkable water?
         </p>
         <form>
-            <textarea disabled={status === "submitting"}/>
+            <textarea 
+            value={answer}
+            onChange={handleTextareaChange}
+            disabled={status === "submitting"}
+            />
             <br />
             <button disabled={status === "empty" || status === "submitting"}>
             Submits
